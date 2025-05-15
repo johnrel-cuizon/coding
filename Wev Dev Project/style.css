@@ -1,0 +1,253 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: black;
+        color: white;
+    }
+    
+    header {
+        width: 80%;
+        height: 100vh;
+    }
+    
+    .container {
+        padding: 0.2px 0;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: fixed;
+        background-color: white;
+        width: 100%;
+    }
+    
+    nav h2 {
+        font-size: 50px;
+        color: #2c24bb;
+        margin-left: 30px;
+    }
+    
+    nav h2 span {
+        font-size: 60px;
+        color: #e4b20c;
+    }
+    
+    .logo {
+        width: 140px;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+    
+    nav ul li a {
+        color: #e4b20c;
+        text-decoration: none;
+        font-size: 25px;
+        transition: color 0.3s;
+        cursor: pointer;
+    }
+    
+    nav ul li a:hover {
+        color: #2c24bb;
+    }
+    
+    .header-text {
+        margin: 15%;
+        font-size: 30px;
+    }
+    
+    .header-text p {
+        color: #2c24bb;
+        font-size: 40px;
+        font-family: 'Times New Roman';
+    }
+    
+    .header-text h1 {
+        font-size: 60px;
+        margin-top: 50px;
+    }
+    
+    .header-text h1 span {
+        color: rgb(223, 155, 53);
+    }
+    /*----------Education-----------*/
+    
+    #Education {
+        padding: 80px 60PX;
+        background-color: rgb(0, 0, 0);
+    }
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .col-1 {
+        color: rgb(255, 255, 255);
+    }
+    
+    .col-1 h1 {
+        font-size: 50px;
+        color: #2c24bb;
+    }
+    
+    .col-1 h2 {
+        margin-top: 50px;
+        font-size: 35px;
+        color: #e4b20c;
+    }
+    
+    .col-1 p {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+    
+    .col-2 button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        border: none;
+        background-color: rgb(0, 0, 0);
+    }
+    
+    .col-2 button a {
+        background-color: #2c24bb;
+        padding: 12px 24px;
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: auto;
+        color: #e4b20c;
+        border-radius: 5px;
+    }
+    /*-----HIGH SCHOOL-----*/
+    
+    .row2 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .col-3 h2 {
+        margin-top: 50px;
+        font-size: 35px;
+        color: #e4b20c;
+    }
+    
+    .col-3 p {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+    
+    .col-4 button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        border: none;
+        background-color: rgb(0, 0, 0);
+    }
+    
+    .col-4 button a {
+        background-color: #2c24bb;
+        padding: 12px 24px;
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: auto;
+        justify-content: flex-end;
+        color: #e4b20c;
+        border-radius: 5px;
+    }
+    /*-----COLLEGE-----*/
+    
+    .row3 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .col-5 h2 {
+        margin-top: 50px;
+        font-size: 35px;
+        color: #e4b20c;
+    }
+    
+    .col-5 p {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+    
+    .col-6 button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        border: none;
+        background-color: rgb(0, 0, 0);
+    }
+    
+    .col-6 button a {
+        background-color: #2c24bb;
+        padding: 12px 24px;
+        text-decoration: none;
+        font-size: 16px;
+        margin-top: auto;
+        justify-content: flex-end;
+        color: #e4b20c;
+        border-radius: 5px;
+    }
+    /*-----CONTACT-----*/
+    
+    #Contact {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+        border: 20px;
+    }
+    
+    .text {
+        font-size: 40px;
+        color: #2c24bb;
+    }
+    
+    .container form {
+        max-width: 500px;
+        margin: auto;
+        margin-top: 40px;
+        color: #e4b20c;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #8e8787;
+        border-radius: 5px;
+        resize: vertical;
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #2c24bb;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        color: #e4b20c;
+    }
+    
+    button:hover {
+        background-color: #000000;
+    }

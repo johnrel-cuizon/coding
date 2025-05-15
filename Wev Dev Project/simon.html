@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="style sheet" href="style.css">
+
+    <style>
+        img {
+            width: 200px;
+            border-radius: 100px;
+            float: left;
+            margin-right: 10px;
+            margin-top: 100px;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {
+            background: #333;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 1em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #00ffff;
+        }
+        
+        section {
+            padding: 100px 20px;
+            margin-top: 60px;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 400px;
+            width: 80%;
+        }
+        
+        .project-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .slider {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .slide {
+            display: inline-block;
+            width: 100%;
+            transition: transform 0.5s;
+        }
+        
+        .form-error {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#education">Education</a>
+        <a href="#trainings">Trainings</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="profile">
+        <img src="images/monny.jpg" alt="mirror shot">
+        <h2>Profile</h2>
+        <p>Hello, Welcome to my portfolio!</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>Diploma in Computer Engineering Technology, Cite Talamban San Jose, Cebu City.</p>
+    </section>
+
+    <section id="trainings">
+        <h2>Trainings & Seminars</h2>
+        <p>Web Dev</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card" onclick="openModal('My first project description')">
+            <h3>Project One</h3>
+            <button><p>Click to learn more</p></button>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Job Experience</h2>
+        <p>none</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+
+            <label>Name:<br><input type="text" id="name" /></label><br>
+            <span id="nameError" class="form-error">Name is required.</span><br>
+            <label>Email:<br><input type="email" id="email" /></label><br>
+            <span id="emailError" class="form-error">Valid email is required.</span><br>
+            <label>Message:<br><textarea id="message"></textarea></label><br>
+            <span id="messageError" class="form-error">Message cannot be empty.</span><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span onclick="closeModal()" style="float:right;cursor:pointer">&times;</span>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(text) {
+            document.getElementById('modalText').innerText = text;
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        function validateForm() {
+            let isValid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+
+            document.getElementById('nameError').style.display = name.value ? 'none' : 'inline';
+            document.getElementById('emailError').style.display = email.value.includes('@') ? 'none' : 'inline';
+            document.getElementById('messageError').style.display = message.value ? 'none' : 'inline';
+
+            if (!name.value || !email.value.includes('@') || !message.value) {
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+
+
+</body>
+
+</html>
